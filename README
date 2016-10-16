@@ -1,0 +1,44 @@
+README
+======
+
+I did it as a part of homework problem in the Machine Learning class taught by Prof Daniel Gildea (https://www.cs.rochester.edu/~gildea/) in Spring 2014. Here I implemented the forward-backward algorithm 
+(message-passing) for a Hidden Markov Model. In addition, I implemented Expectation Maximization (EM) to train
+the model in an unsupervised fashion.
+==========================================================================================================
+
+Name: Md. Iftekhar Tanveer
+Email: itanveer@cs.rochester.edu  or  go2chayan@gmail.com
+Course: CS446
+Homework: HMM algorithm
+
+
+************** Files ***************
+README: This document
+hw8.py: The original python script. Just run the file using python. The main function will be automatically called.
+points.dat: Dataset file
+The PNG Files: Picture of the plots illustrating the results. Please read the following results section and compare that with these plots
+
+************* Algorithm ************
+The algorithm is described in code. Please look at the comments in the original code.
+I have described the steps and the datastructures
+
+
+************* Results **************
+Does the HMM model the data better than the original non-sequence model? 
+
+HMM is definitely better than the original non-sequence model. HMM converges much faster
+(only in about <50 iteration 4 states) than the non-sequence model (took about 150 iterations with
+same threshold of convergence and with 4 states).
+
+
+What is the best number of states?
+
+After running the simulations manually (pictures of plots attached) from total number of states = 2 to 8, I saw the best loglikelihood (on dev data) with minimum number of state is obtained when the total number of state is 5 (pictures attached).
+
+Therefore, 5 is the best number of states.
+
+************* Interpretations *****
+The maximum likelihood for dev data starts to fall when I use more clusters than 5. That is an indication that, with more and more clusters, the model starts to overfit to the training data. So, we can interpret that, the inherent number of clusters in the data is no more than 5. 
+
+
+
